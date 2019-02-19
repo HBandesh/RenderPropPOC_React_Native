@@ -6,9 +6,12 @@ import {
 } from 'react-native';
 
 export const AvengersListItemView = ({item}) => {
+    const pic = {
+        uri: item.avtar
+    };
     return(
         <View className="card">
-            <Image ssource={item.avtar} className="card-img-top" alt="Avenger" title="Avenger Image"/>
+            <Image source={pic} style={{width: 193, height: 110}} className="card-img-top" alt="Avenger" title="Avenger Image"/>
             <View className="card-body">
                 <Text className="card-title"> {item.Name} </Text>
                 <Text className="card-text"> {`Powers : ${item.Powers}`} </Text>
